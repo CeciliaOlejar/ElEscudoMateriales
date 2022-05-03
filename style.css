@@ -1,0 +1,34 @@
+p{
+    color: blue;
+    font-style: italic;
+    font-weight: 700;
+    font-size: larger;
+    
+}
+h1{
+    color: brown;
+    font-size: 2cm;
+}
+/* el # me selecciona un ID */
+#logo {
+  size: 500px;
+}
+/* el . me selleciona una class */
+.p234 {
+    color: darkred;
+    font-weight: bold;
+    font-style: oblique;
+    font-size: xx-small;
+}
+/* el * selecciona todo el body */
+*{ 
+    margin: 10px;
+   background-color: rgb(140, 179, 234);
+   border-style: solid;
+   border-radius: 50px;
+   border-color: rgb(0, 115, 60);
+}
+
+h2
+{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
