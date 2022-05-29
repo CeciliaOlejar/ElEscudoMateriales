@@ -1,34 +1,3612 @@
-p{
-    color: blue;
-    font-style: italic;
-    font-weight: 700;
-    font-size: larger;
-    
-}
-h1{
-    color: brown;
-    font-size: 2cm;
-}
-/* el # me selecciona un ID */
-#logo {
-  size: 500px;
-}
-/* el . me selleciona una class */
-.p234 {
-    color: darkred;
-    font-weight: bold;
-    font-style: oblique;
-    font-size: xx-small;
-}
-/* el * selecciona todo el body */
 *{ 
-    margin: 10px;
-   background-color: rgb(140, 179, 234);
-   border-style: solid;
-   border-radius: 50px;
-   border-color: rgb(0, 115, 60);
+    margin: 0rem;
+    /* font-family: 'Lato', sans-serif; */
+    /* font-family: 'Lora', serif; */
+    /* font-family: 'Poppins', sans-serif; */
+    font-family:  letrabody;
+    letter-spacing: 0.05em; 
 }
 
-h2
-{
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+@font-face {
+    font-family: MyTipologo;
+    src: url(Fonts/OPTIAmericanGothic-Bold/OPTIAmericanGothic-Bold.otf);
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: letrabody;
+    src: url(Fonts/Lemon-Milk-light/LemonMilklight.otf);
+    font-style: normal;
+    word-spacing: 2px;
+}
+/* Underline From Left animacion de https://ianlunn.github.io/Hover/  */
+.hvr-underline-from-left {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    position: relative;
+    overflow: hidden;
+  }
+  .hvr-underline-from-left:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    right: 100%;
+    bottom: 0;
+    background: #000000;
+    height: 3px;
+    -webkit-transition-property: right;
+    transition-property: right;
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+  }
+  .hvr-underline-from-left:hover:before, .hvr-underline-from-left:focus:before, .hvr-underline-from-left:active:before {
+    right: 0;
+  }
+
+/* Grow nimacion de https://ianlunn.github.io/Hover/ */
+.hvr-grow {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+  }
+  .hvr-grow:hover, .hvr-grow:focus, .hvr-grow:active {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+/* Outline Out  animacion de https://ianlunn.github.io/Hover/ */
+.hvr-outline-out {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    position: relative;
+  }
+  .hvr-outline-out:before {
+    content: '';
+    position: absolute;
+    border: #F9BA32 solid 4px;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: top, right, bottom, left;
+    transition-property: top, right, bottom, left;
+  }
+  .hvr-outline-out:hover:before, .hvr-outline-out:focus:before, .hvr-outline-out:active:before {
+    top: -8px;
+    right: -8px;
+    bottom: -8px;
+    left: -8px;
+}
+
+/* Grow shadow animacion de https://ianlunn.github.io/Hover/ */ 
+.hvr-grow-shadow {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: box-shadow, transform;
+    transition-property: box-shadow, transform;
+  }
+  .hvr-grow-shadow:hover, .hvr-grow-shadow:focus, .hvr-grow-shadow:active {
+    box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.5);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
+  
+/* Sweep To Right  animacion de https://ianlunn.github.io/Hover/ */
+.hvr-sweep-to-right {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    position: relative;
+    -webkit-transition-property: color;
+    transition-property: color;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+  }
+  .hvr-sweep-to-right:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background:#F9BA32;
+    border-radius: 15px;
+    border: 2px solid #F9BA32;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transform-origin: 0 50%;
+    transform-origin: 0 50%;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+    -webkit-transition-duration: 0.6s;
+    transition-duration: 0.6s;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+  }
+  .hvr-sweep-to-right:hover, .hvr-sweep-to-right:focus, .hvr-sweep-to-right:active {
+    color: rgb(255, 255, 255);
+  }
+  .hvr-sweep-to-right:hover:before, .hvr-sweep-to-right:focus:before, .hvr-sweep-to-right:active:before {
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+}
+
+/* BARRA TOP INDICADOR DE PAGINA Y REDES */
+.top {
+    background-color: rgb(8, 111, 177);
+    color: white;
+    width: 100%;
+    box-shadow: 0rem 0rem  0.15rem;
+    justify-content:space-between;
+    margin: 0;
+    padding: 0;
+    z-index: 1;
+}
+
+.barradeinicio{
+    display: flex ;
+    justify-content: space-between;
+    text-decoration: none;
+    align-content: space-around;
+    align-items: inherit;
+    margin: 0;
+    padding: 0; 
+}
+
+.textodeinicio{
+margin-top: 0.1rem;
+}
+
+.navinicio ul {
+margin-top: 0.1rem;
+margin-bottom: 0;
+padding: 0;
+list-style: none;
+}
+
+.navinicio ul li{
+    display: inline-block;
+}
+
+.navinicio ul li a{
+    display: block;
+    margin-left: 0.5rem;
+    transition: all 0.4s linear;
+    border-radius: 5px ;
+    align-items: center;
+}
+@media only screen and (max-width:576px) {
+     
+    .textodeinicio{
+    margin-top: 0.1rem;
+    font-size: medium;
+    }
+    .navinicio img{
+        width: 1.3rem;
+    }
+  
+}
+
+@media only screen and (max-width:330px) { header {
+    display: none;
+}
+}
+
+
+/* BARRA DE MENU FIJA */
+.initop {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    height: auto;
+    box-shadow: 0rem 0rem  0.5rem;
+    z-index: 1000;
+}
+#header {
+    box-sizing: border-box;
+    height: 100px;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+#menu {
+    display: flex;
+    list-style: none;
+    gap: .5rem;
+}
+#menu a {
+    display: block;
+    padding: .5rem;
+}
+
+#btn-mobile {
+    display: none;
+    color: #000000;
+    border: .1rem solid black;
+    padding: .1rem;
+}
+.barramenu {
+    display: flex ;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+.menu ul {
+    list-style: none;
+}
+
+.menu ul li{
+    display: inline-block;
+    
+}
+
+.menu ul li a{
+    font-family:  MyTipologo;
+    margin: 0.5rem;
+    margin-top: 1.5rem;
+    text-decoration: none;
+    color: #000000;
+    transition: all 0.5s linear;
+    padding: 1rem;
+    border-radius: 5px ;
+    font-size: medium;
+    cursor: pointer;
+    text-align: center;
+}
+
+.menu ul li a:hover{
+    background-color:rgb(253, 180, 75);
+   
+}
+
+.logomenu{
+
+    height: auto;
+    padding-left: 2rem;
+}
+
+/* Media query de las barras de navegacion */
+@media only screen and (max-width:1100px){
+    .logomenu{
+        width: 30vw;
+        height: auto;
+        padding-left: 2rem;
+    }  
+
+}
+@media only screen and (max-width:992px){
+    .logomenu{
+        width: 35vw;
+        height: auto;
+        padding-left: 2rem;
+    }  
+    .menu ul li a{
+        font-family:  MyTipologo;
+        margin: 0.4rem;
+        margin-top: 1.5rem;
+        text-decoration: none;
+        color: #000000;
+        transition: all 0.5s linear;
+        padding: 1rem;
+        border-radius: 5px ;
+        font-size: 1.4vw;
+        cursor: pointer;
+        text-align: center;
+    }
+}
+@media only screen and (max-width:790px) {
+   /* BARRA DE MENU FIJA */
+.initop {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    height: auto;
+    box-shadow: 0rem 0rem  0.5rem;
+    z-index: 1000;
+}
+#header {
+    box-sizing: border-box;
+    height: 100px;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+#menu {
+    display: flex;
+    list-style: none;
+    gap: 0.5rem;
+}
+#menu a {
+    display: block;
+    padding: .5rem;
+}
+
+.barramenu {
+    display: flex ;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+.menu ul {
+    list-style: none;
+}
+
+.menu ul li{
+    display: inline-block;
+    
+}
+
+.menu ul li a{
+    font-family:  MyTipologo;
+    margin: 0.4rem;
+    margin-top: 1.5rem;
+    text-decoration: none;
+    color: #000000;
+    transition: all 0.5s linear;
+    padding: 1rem;
+    border-radius: 5px ;
+    font-size: 1.5vw;
+    cursor: pointer;
+    text-align: center;
+}
+
+.menu ul li a:hover{
+    background-color:rgb(253, 180, 75);
+   
+}
+.logomenu{
+    width: 110%;
+    height: auto;
+    padding-left: 2rem;
+}  
+}
+
+/* Cambio de Menu de inicio a Menu Hamburgesa */
+@media (max-width: 660px) {
+    #btn-mobile {
+        display: block;
+    }
+    .imagenesmenu {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: auto;}
+    #menu {
+        position: absolute;
+        width: 100%;
+        top: 100px;
+        right: 0;
+        display: block;
+        background-color:#094A7D;
+        border-radius:0 0 20px 20px;
+        height: 0;
+        z-index: 1000;
+        transition: .6s;
+        visibility: hidden;
+        overflow-y: hidden;
+        text-align: center;
+    }
+
+    #nav.active #menu {
+        display: block;
+        visibility: visible;
+        height: calc(11vh - 10px);
+        overflow-y: auto;
+    }
+
+    #menu a {
+        padding: 1rem 0;
+        margin: 0.5rem;
+        font-size: xx-small;
+        transition: all 0.5s linear;
+        padding: 0.5rem;
+        border-radius: 5px ;
+        color: #fff;
+
+    }
+    .menu ul li a:hover{
+        background-color:#F9BA32 !important;}
+
+    .logomenu{
+        width: 65%;
+        height: auto;
+        padding-left: 2rem;
+    } 
+
+    #btn-mobile {
+        display: flex;
+        padding: .5rem 1rem;
+        font-size: 1rem;
+        border: none;
+        cursor: pointer;
+        gap: .5rem;
+    }
+
+    #hambuguer {
+        border-top: 3px solid;
+        width: 20px;
+    }
+
+    #hambuguer::before, #hambuguer::after {
+        content: '';
+        display: block;
+        width: 20px;
+        height: 2px;
+        background-color: currentColor;
+        margin-top: 5px;
+        transition: .4s;
+        position: relative;
+    }
+
+    #nav.active #hambuguer {
+        border-top-color: transparent;
+    }
+
+    #nav.active #hambuguer::before {
+        transform: rotate(135deg);
+    }
+
+    #nav.active #hambuguer::after {
+        transform: rotate(-135deg);
+        top: -7px;
+    }
+}
+
+
+aside {
+    margin-top: 1rem;
+}
+
+section {
+    display: flex;   
+    color: black;
+    clear:both;
+    overflow: auto;
+    width: 95%;
+    margin: auto auto;
+    margin-top: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ICONO FLOTANTE DE WPP */
+.wpp {
+    position: fixed;
+    bottom: 5rem;
+    right: 3rem;
+    border-radius: 50px;
+    box-shadow: 0rem 0rem 0.8rem rgb(200, 202, 207) ;
+    z-index: 1000; 
+}
+/* Media query de wpp */
+@media only screen and (max-width:576px) {
+    .wpp {
+        position: fixed;
+        bottom: 1rem;
+        right: 1rem;
+        border-radius: 50px;
+        box-shadow: 0rem 0rem 0.8rem rgb(200, 202, 207) ;
+        z-index: 1000;     
+    }
+    .wpp img{
+        width: 3rem;
+    }
+}
+@media only screen and (max-width:786px) {
+    .wpp {
+        position: fixed;
+        bottom: 2.5rem;
+        right: 2rem;
+        border-radius: 50px;
+        box-shadow: 0rem 0rem 0.8rem rgb(200, 202, 207) ;
+        z-index: 1000;     
+    }
+    .wpp img{
+        width: 3rem;
+    }
+}
+/* DIVISION 1 LINEA */
+.elemento-div{
+    text-align: left;
+    padding-top: 1px;
+    padding-bottom: 1px; 
+    background-color: rgb(112, 112, 112);
+    width: 60%;
+    margin: 0 auto;
+    margin-left: 10;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+/* DIVISION 2 BLOQUE */
+#square-aside{
+    height: 7rem;
+    width: 100%;
+    border-top: #000000 solid 0.2rem;
+    background: rgb(41,132,189);
+    background: linear-gradient(180deg, rgba(41,132,189,1) 0%, rgba(9,74,125,1) 18%);    clip-path: polygon(20% 0%, 80% 0%, 100% 0, 100% 70%, 80% 100%, 20% 100%, 0 70%, 0 0);
+    display:flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    align-content: center;
+    justify-content: center; 
+    overflow: hidden;
+    text-align: center;
+}
+
+#square-aside div {
+     color: #F9BA32;
+     width: 100%;
+     font-size: medium;
+     margin-top: 1rem;
+}
+
+/* DIVISOR 3 BLOQUE */
+#square-aside-2{
+    height: 8rem;
+    width: 100%;
+    border-top: #000000 solid 0.2rem;
+    background: #F9BA32;
+    clip-path: polygon(20% 0%, 80% 0%, 100% 0, 100% 70%, 80% 100%, 20% 100%, 0 70%, 0 0);
+    display:flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    align-content: center;
+    justify-content: center; 
+    overflow: hidden;
+    text-align: center;
+    flex-direction: column;
+    color: #ffffff;
+    
+}   
+#square-aside-2-div{
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+}
+#square-aside-2 p{
+    margin-bottom: 1rem;
+}
+/* slide marcas */
+@-webkit-keyframes scroll {
+    0% {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+    }
+    100% {
+      -webkit-transform: translateX(calc(-250px * 12));
+              transform: translateX(calc(-250px * 12));
+    }
+  }
+  
+  @keyframes scroll {
+    0% {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+    }
+    100% {
+      -webkit-transform: translateX(calc(-250px * 12));
+              transform: translateX(calc(-250px * 12));
+    }
+  }
+  .slider {
+    background: white;
+    /*box-shadow: 0 10px 20px -5px rgba(0, 0, 0, .125);*/
+    height: 100px;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+    width: 95%;
+  }
+  .slider::before, .slider::after {
+    background: linear-gradient(to right, white 0%, rgba(255, 255, 255, 0) 100%);
+    content: "";
+    height: 100px;
+    position: absolute;
+    width: 200px;
+    z-index: 2;
+  }
+  .slider::after {
+    right: 0;
+    top: 0;
+    -webkit-transform: rotateZ(180deg);
+            transform: rotateZ(180deg);
+  }
+  .slider::before {
+    left: 0;
+    top: 0;
+  }
+  .slider .slide-track {
+    -webkit-animation: scroll 40s linear infinite;
+            animation: scroll 40s linear infinite;
+    display: flex;
+    width: calc(250px * 12);
+  }
+  .slider .slide {
+    height: 50px;
+    width: 250px;
+  }
+
+/* Footer completo */
+footer{
+    margin-top: 1rem;
+    background-color: #000000;
+    border-top: #000000 2px solid;
+    text-align: center;
+ } 
+ 
+ .Barrafooter{
+     background-color: #ffffff;
+     display: flex ;
+     justify-content: space-between;
+     text-decoration: none;
+     align-content: space-around;
+     align-items: inherit;
+     align-items: center;
+     margin: 0;
+     padding: 0; 
+ }
+ 
+ .textodefooter{
+     margin-top: 0.3rem;
+     margin-left: 0.5rem;
+ }
+ 
+ .navfooter ul {
+     margin-top: 0.1rem;
+     margin-bottom: 0;
+     padding: 0;
+     list-style: none;
+ }
+ 
+ .navfooter ul li{
+     display: inline-block;
+     align-items: center;
+     
+ }
+ .navfooter ul li a{
+     display: block;
+     margin-left: 0.5rem;
+     transition: all 0.4s linear;
+     border-radius: 5px ;
+     align-items: center;
+     cursor: pointer;
+ }
+ 
+ #Desarrolladoby{
+     font-size: 0.6em;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     margin: 0 0;
+     background-color: #F9BA32; 
+     color: #ffffff;
+ }
+ 
+ footer a {
+     text-decoration: none;
+     color: rgb(255, 255, 255);
+     font-size: 0.5em;
+ }
+ /* media query del footer */
+ @media only screen and (max-width:768px){
+    footer{
+        margin-top: 1rem;
+        background-color: #000000;
+        border-top: #000000 2px solid;
+        text-align: center;
+     } 
+     
+     .Barrafooter{
+         background-color: #ffffff;
+         display: flex ;
+         flex-direction: column-reverse;
+         justify-content: space-between;
+         text-decoration: none;
+         align-content: space-around;
+         align-items: inherit;
+         align-items: center;
+         margin: 0;
+         padding: 0; 
+     }
+     .textodefooter{
+        margin-top: 0.3rem;
+        margin-left: 0.5rem;
+        font-size: medium;
+    }
+    .navfooter ul li{
+        display: inline-block;
+        align-items: center;
+        font-size: small;
+        
+    }
+    }
+
+ @media only screen and (max-width:576px){
+    footer{
+        margin-top: 1rem;
+        background-color: #000000;
+        border-top: #000000 2px solid;
+        text-align: center;
+     } 
+     
+     .Barrafooter{
+         background-color: #ffffff;
+         display: flex ;
+         flex-direction: column-reverse;
+         justify-content: space-between;
+         text-decoration: none;
+         align-content: space-around;
+         align-items: inherit;
+         align-items: center;
+         margin: 0;
+         padding: 0; 
+     }
+     
+     .textodefooter{
+         margin-top: 0.3rem;
+         margin-left: 0.5rem;
+         font-size: small;
+     }
+    
+     .navfooter ul {
+         width: 100%;
+         margin-top: 0.1rem;
+         margin-bottom: 0;
+         padding: 0;
+         list-style: none;
+     }
+     
+     .navfooter ul li{
+         display: inline-block;
+         align-items: center;
+         font-size: smaller;
+         
+     }
+     .navfooter ul li a{
+         display: block;
+         margin-left: 0.5rem;
+         transition: all 0.4s linear;
+         border-radius: 5px ;
+         align-items: center;
+         cursor: pointer;
+     }
+     .navfooter img{
+        width: 1.2rem;
+       margin-bottom: 0.5rem;
+
+     }
+
+     #Desarrolladoby{
+         font-size: 0.6em;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         margin: 0 0;
+         background-color: #F9BA32; 
+         color: #ffffff;
+     }
+     
+     footer a {
+         text-decoration: none;
+         color: rgb(255, 255, 255);
+         font-size: 0.2em;
+
+     }
+ }
+
+
+
+/* index.html */
+/* INTRODUCCION DE QUIENES SOMOS */
+ .Intro {
+    display: flex;}
+    
+.texto-intro {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    margin-left: 6rem;
+    text-align: justify;
+}
+    
+.texto-intro p{
+    font-family: sans-serif !important;
+    font-size:large;
+    line-height: 1.5em;
+    letter-spacing: 0.01em;
+}
+
+/* Promo costado del texto intro */
+.promo-costado{
+    margin: 0% 0%;
+    margin-right: 2rem;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+/* UBICACION INICIO  */
+#container-maps{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 16px;
+    margin: auto auto;
+    align-items: center;
+    background-color: #FFFFFF;
+}
+.promo-4{
+    text-align: center;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin: 1rem 1rem;
+    font-family: MyTipologo !important;
+    color: #000000;
+    
+    grid-area: 1 / 1 / 2 / 2; 
+}
+.promo-4 p{
+    margin-top: 1rem;
+    font-weight: bold;
+    font-size:1.5rem;
+}
+
+.promo-5{
+   grid-area: 2 / 1 / 3 / 2;
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+}
+.promo-5 ul li a {
+    text-decoration: none;
+    color: #000000;
+    cursor: pointer;
+}
+.promo-5 ul li a:hover{
+    color: #F9BA32;
+}
+.promo-6 {
+    margin-top: 1rem;
+     margin-left: 1rem;
+    grid-area: 1 / 2 / 3 / 3;   
+}
+
+/* Seccion de Contacto y medios de pago */
+.Contac-pagos{
+    width: 100%;
+}
+/* formulario de contacto */
+form.form-contact1{
+    width: 100%;
+    padding: 2rem 3rem;
+    border-right: #094A7D 0.2rem solid;
+}
+
+form.form-contact1 h2{
+	font-size: 1.5rem;
+	font-weight: 600;
+	color: #303030;
+	margin-bottom: 1rem;
+}
+
+form.form-contact1 .user_info{
+    display: flex;
+    flex-direction: column;
+}
+
+form.form-contact1 label{
+    font-weight: 600;
+    font-size: 0.8rem;
+}
+
+form.form-contact1 input,
+form.form-contact1 textarea{
+    width: 100%;
+    padding: 8px 0px 5px;
+    margin-bottom: 1rem;
+    border: none;
+    border-bottom: 2px solid #D1D1D1;
+	color: #5A5A5A;
+	font-size: 0.8rem;
+	font-weight: 400;
+}
+
+form.form-contact1 textarea{
+    max-width: 30%;
+    min-width: 100%;
+    max-height: 10rem;
+}
+
+form.form-contact1 input[type="submit"]{
+    width: 15rem;
+	background: #094A7D;
+	padding: 0.5rem;
+	border: none;
+	border-radius: 15px;
+    align-self: flex-end;
+    color: #fff;
+	font-size: 1rem;
+	font-weight: 600;
+	cursor: pointer;
+}
+
+form.form-contact1 input[type="submit"]:hover{
+    background: #F9BA32;
+}
+/* BANNER MEDIOS DE PAGO */
+.promo-section-2{
+    width: 100%;
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    border: 0.2rem #094A7D solid;
+    padding: 1rem;
+}
+
+.promo-container-2 {
+    background-color: rgb(255, 255, 255);
+    color: #000000;
+    border-bottom: 0.1rem rgba(0, 0, 0, 0.817) solid;
+    height: auto;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: stretch;
+}
+#square-promo{
+    width: 70%;
+    height: 90%;
+    color: white;
+    background-color: #F9BA32;
+    margin: 0rem 25%;
+    clip-path: polygon(0 0, 100% 0%, 100% 65%, 50% 100%, 0 65%);
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+}
+
+.promo-item1 {
+    font-family: arial !important;
+    font-size: 2rem;
+    color: #000000;
+    font-weight: bold;
+    grid-area: 1 / 2 / 2 / 3;
+}
+
+.button-presupuesto{
+    font-size: 1rem;
+}
+.promo-items2{
+    display: flex;
+    flex-basis: 100%;
+    align-self: auto;
+    align-content: center;
+    justify-content: center;
+    padding: 0.5rem 0.5rem;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.promo-items3{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: 1rem;
+}
+.submit-presupuesto {
+    width: 15rem;
+	background: #094A7D;
+	padding: 0.5rem;
+	border: none;
+	border-radius: 15px;
+    align-self: flex-end;
+    color: #fff;
+	font-size: 1rem;
+	font-weight: 600;
+	cursor: pointer;
+}
+
+/* Media query de Index.html */
+/* Break point 576px, 768px, 992px. */
+@media only screen and (max-width:992px) {
+    .Intro {
+        display: flex;
+        flex-direction: column; justify-content: center;
+    }
+            
+        .texto-intro {
+            display: flex;
+            flex-direction: column;
+            width: 90%;
+            margin-top: 0.5rem;
+            margin-left: 2rem;
+            margin-right: 2rem;
+            text-align: justify;
+        }
+            
+        .texto-intro p{
+            font-family: sans-serif !important;
+            font-size: large;
+            line-height: 1.5em;
+            letter-spacing: 0.01em;
+        }
+        
+        
+        /* Promo costado del texto intro */
+        .promo-costado{
+            margin-right: 0.5rem;
+            margin-left: 0rem;
+            width: 100%;
+            display: flex;
+            align-content: center;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+        .promo-costado h4{
+            font-size: x-large;
+        }
+        #div-container-promos{
+            display: flex;
+            margin-bottom: 0.5rem;
+            
+        }
+        .promo-1, .promo-2{
+            width: 100%;
+            margin-bottom: 0.5rem;
+            margin-left: 0.5rem;
+            margin-right: 0.5rem;
+        }
+         
+}
+
+@media only screen and (max-width:768px) {
+    /* DIVISION 1 LINEA */
+.elemento-div{
+    text-align: left;
+    padding-top: 1px;
+    padding-bottom: 1px; 
+    background-color: rgb(112, 112, 112);
+    width: 60%;
+    margin: 0 auto;
+    margin-left: 10;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+/* DIVISION 2 BLOQUE */
+#square-aside{
+    height: 6rem;
+    width: 100%;
+    border-top: #000000 solid 0.2rem;
+    background: rgb(41,132,189);
+    background: linear-gradient(180deg, rgba(41,132,189,1) 0%, rgba(9,74,125,1) 18%);    clip-path: polygon(20% 0%, 80% 0%, 100% 0, 100% 70%, 80% 100%, 20% 100%, 0 70%, 0 0);
+    display:flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    align-content: center;
+    justify-content: center; 
+    overflow: hidden;
+    text-align: center;
+}
+
+#square-aside div {
+     color: #F9BA32;
+     width: 100%;
+     font-size: small;
+     margin-top: 1rem;
+}
+
+/* DIVISOR 3 BLOQUE */
+#square-aside-2{
+    height: 6rem;
+    width: 100%;
+    border-top: #000000 solid 0.2rem;
+    background: #F9BA32;
+    clip-path: polygon(20% 0%, 80% 0%, 100% 0, 100% 70%, 80% 100%, 20% 100%, 0 70%, 0 0);
+    display:flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    align-content: center;
+    justify-content: center; 
+    overflow: hidden;
+    text-align: center;
+    flex-direction: column;
+    color: #ffffff;
+    
+}   
+#square-aside-2-div{
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+}
+#square-aside-2 p{
+    margin-bottom: 1rem;
+    font-size: small;
+}
+    .Intro {
+    display: flex;
+    flex-direction: column; justify-content: center;
+}
+        
+    .texto-intro {
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        margin-top: 0.5rem;
+        margin-left: 2rem;
+        margin-right: 2rem;
+        text-align: justify;
+    }
+        
+    .texto-intro p{
+        font-family: sans-serif !important;
+        font-size: medium;
+        line-height: 1.5em;
+        letter-spacing: 0.01em;
+    }
+    
+    
+    /* Promo costado del texto intro */
+    .promo-costado{
+        margin-right: 0.5rem;
+        margin-left: 0rem;
+        width: 100%;
+        display: flex;
+        align-content: center;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    .promo-costado h4{
+        font-size: x-large;
+    }
+    #div-container-promos{
+        display: flex;
+        margin-bottom: 0.5rem;
+        flex-direction: column;
+        
+    }
+    .promo-1, .promo-2{
+        width: 100%;
+        margin-bottom: 0.5rem;
+    }
+    
+    /* UBICACION INICIO  */
+    #container-maps{
+        display: flex;
+        flex-direction: column;
+        margin: auto auto;
+        align-items: center;
+        background-color: #FFFFFF;
+    }
+    .promo-4{
+        text-align: center;
+        width: 90%;
+        display: flex;
+        align-items: center;
+        margin: 1rem 1rem;
+        font-family: MyTipologo !important;
+        color: #000000;
+    }
+    .promo-4 p{
+        margin-top: 1rem;
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
+        font-weight: bold;
+        font-size: 1rem;
+    }
+    
+    .promo-5{
+        display: flex;
+        flex-wrap: nowrap;
+        width: 85%;
+        font-size: small;
+    }
+    .promo-5 ul li a {
+        text-decoration: none;
+        color: #000000;
+        cursor: pointer;
+       
+    }
+    .promo-5 ul li a:hover{
+        color: #F9BA32;
+    }
+    .promo-6 {
+        width: 85%;
+        margin-top: 1rem;
+        margin-left: 1rem;   
+    }
+    .promo-6 iframe{
+        width: 100%;
+        height: 10rem;
+    }
+    /* Seccion de Contacto y medios de pago */
+    .Contac-pagos{
+        width: 100%;
+    }
+    /* formulario de contacto */
+    form.form-contact1{
+        width: 100%;
+        padding: 2rem 3rem;
+        border-right: #094A7D 0.2rem solid;
+    }
+    
+    form.form-contact1 h2{
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: #303030;
+        margin-bottom: 1rem;
+    }
+    
+    form.form-contact1 .user_info{
+        display: flex;
+        flex-direction: column;
+    }
+    
+    form.form-contact1 label{
+        font-weight: 600;
+        font-size: 0.8rem;
+    }
+    
+    form.form-contact1 input,
+    form.form-contact1 textarea{
+        width: 100%;
+        padding: 8px 0px 5px;
+        margin-bottom: 1rem;
+        border: none;
+        border-bottom: 2px solid #D1D1D1;
+        color: #5A5A5A;
+        font-size: 0.8rem;
+        font-weight: 400;
+    }
+    
+    form.form-contact1 textarea{
+        max-width: 30%;
+        min-width: 100%;
+        max-height: 10rem;
+    }
+    
+    form.form-contact1 input[type="submit"]{
+        width: 15rem;
+        background: #094A7D;
+        padding: 0.5rem;
+        border: none;
+        border-radius: 15px;
+        align-self: flex-end;
+        color: #fff;
+        font-size: 1rem;
+        font-weight: 600;
+        cursor: pointer;
+    }
+    
+    form.form-contact1 input[type="submit"]:hover{
+        background: #F9BA32;
+    }
+    /* BANNER MEDIOS DE PAGO */
+    .promo-section-2{
+        width: 100%;
+        margin: 1rem;
+        display: flex;
+        flex-direction: column;
+        border: 0.2rem #094A7D solid;
+        padding: 1rem;
+    }
+    
+    .promo-container-2 {
+        background-color: rgb(255, 255, 255);
+        color: #000000;
+        border-bottom: 0.1rem rgba(0, 0, 0, 0.817) solid;
+        height: auto;
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: stretch;
+    }
+    #square-promo{
+        width: 70%;
+        height: 90%;
+        color: white;
+        background-color: #F9BA32;
+        margin: 0rem 25%;
+        clip-path: polygon(0 0, 100% 0%, 100% 65%, 50% 100%, 0 65%);
+        text-align: center;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        align-content: center;
+        justify-content: center;
+    }
+    
+    .promo-item1 {
+        font-family: arial !important;
+        font-size: 2rem;
+        color: #000000;
+        font-weight: bold;
+        grid-area: 1 / 2 / 2 / 3;
+    }
+    
+    .button-presupuesto{
+        font-size: 1rem;
+    }
+    .promo-items2{
+        display: flex;
+        flex-basis: 100%;
+        align-self: auto;
+        align-content: center;
+        justify-content: center;
+        padding: 0.5rem 0.5rem;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .promo-items3{
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        margin-top: 1rem;
+    }
+    .submit-presupuesto {
+        width: 15rem;
+        background: #094A7D;
+        padding: 0.5rem;
+        border: none;
+        border-radius: 15px;
+        align-self: flex-end;
+        color: #fff;
+        font-size: 1rem;
+        font-weight: 600;
+        cursor: pointer;
+    }   
+}
+
+@media only screen and (max-width:576px) {
+    /* DIVISION 1 LINEA */
+.elemento-div{
+    text-align: left;
+    padding-top: 1px;
+    padding-bottom: 1px; 
+    background-color: rgb(112, 112, 112);
+    width: 60%;
+    margin: 0 auto;
+    margin-left: 10;
+    margin-top: 1rem;
+}
+
+    /* DIVISION 2 BLOQUE */
+#square-aside{
+    height: 3rem;
+    width: 100%;
+    border-top: #000000 solid 0.2rem;
+    background: rgb(41,132,189);
+    background: linear-gradient(180deg, rgba(41,132,189,1) 0%, rgba(9,74,125,1) 18%);    clip-path: polygon(20% 0%, 80% 0%, 100% 0, 100% 70%, 80% 100%, 20% 100%, 0 70%, 0 0);
+    display:flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    align-content: center;
+    justify-content: center; 
+    overflow: hidden;
+    text-align: center;
+}
+
+#square-aside div {
+     color: #F9BA32;
+     width: 100%;
+     font-size: xx-small;
+     margin-top: 1rem;
+}
+
+/* DIVISOR 3 BLOQUE */
+#square-aside-2{
+    height: 3rem;
+    width: 100%;
+    border-top: #000000 solid 0.2rem;
+    background: #F9BA32;
+    clip-path: polygon(20% 0%, 80% 0%, 100% 0, 100% 70%, 80% 100%, 20% 100%, 0 70%, 0 0);
+    display:flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    align-content: center;
+    justify-content: center; 
+    overflow: hidden;
+    text-align: center;
+    flex-direction: column;
+    color: #ffffff;
+    
+}   
+#square-aside-2-div{
+    margin-top: 1rem;
+}
+#square-aside-2 img{
+    display: none;
+}
+#square-aside-2 p{
+    padding-bottom: 0.5rem;
+    font-size: 0.6rem;
+    
+}
+    .Intro {
+        display: flex;
+    flex-direction: column;}
+        
+    .texto-intro {
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        margin-top: 0.5rem;
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+        text-align: justify;
+    }
+        
+    .texto-intro p{
+        font-family: sans-serif !important;
+        font-size:small;
+        line-height: 1.5em;
+        letter-spacing: 0.01em;
+    }
+    #desaparece-576px{
+        display: none;
+    }
+    
+    /* Promo costado del texto intro */
+    .promo-costado{
+        margin-right: 0.5rem;
+        margin-left: 0rem;
+        width: 100%;
+        display: flex;
+        align-content: center;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    .promo-costado h4{
+        font-size: small;
+    }
+    #div-container-promos{
+        display: flex;
+        margin-bottom: 0.5rem;
+        flex-direction: column;
+       
+    }
+    .promo-1, .promo-2{
+        width: 100%;
+        margin-bottom: 0.5rem;
+    }
+    
+    /* UBICACION INICIO  */
+    #container-maps{
+        display: flex;
+        flex-direction: column;
+        margin: auto auto;
+        align-items: center;
+        background-color: #FFFFFF;
+    }
+    .promo-4{
+        text-align: center;
+        width: 90%;
+        display: flex;
+        align-items: center;
+        margin: 1rem 1rem;
+        font-family: MyTipologo !important;
+        color: #000000;
+    }
+    .promo-4 p{
+        margin-top: 1rem;
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
+        font-weight: bold;
+        font-size: 0.7rem;
+    }
+    
+    .promo-5{
+        display: flex;
+        flex-wrap: nowrap;
+        width: 85%;
+        font-size: xx-small;
+    }
+    .promo-5 ul li a {
+        text-decoration: none;
+        color: #000000;
+        cursor: pointer;
+       
+    }
+    .promo-5 ul li a:hover{
+        color: #F9BA32;
+    }
+    .promo-6 {
+        width: 85%;
+        margin-top: 1rem;
+        margin-left: 1rem;   
+    }
+    .promo-6 iframe{
+        width: 100%;
+        height: 10rem;
+    }
+    /* Seccion de Contacto y medios de pago */
+    .Contac-pagos{
+        width: 100%;
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    /* formulario de contacto */
+    form.form-contact1{
+        width: 100%;
+        padding: 2rem 3rem;
+        border-right: 0;
+    }
+    
+    form.form-contact1 h2{
+        font-size: 1.2rem;
+        font-weight: 600;
+        color: #303030;
+        margin-bottom: 1rem;
+    }
+    
+    form.form-contact1 .user_info{
+        display: flex;
+        flex-direction: column;
+    }
+    
+    form.form-contact1 label{
+        font-weight: 600;
+        font-size: 0.8rem;
+    }
+    
+    form.form-contact1 input,
+    form.form-contact1 textarea{
+        width: 100%;
+        padding: 8px 0px 5px;
+        margin-bottom: 1rem;
+        border: none;
+        border-bottom: 2px solid #D1D1D1;
+        color: #5A5A5A;
+        font-size: 0.7rem;
+        font-weight: 400;
+    }
+    
+    form.form-contact1 textarea{
+        max-width: 30%;
+        min-width: 100%;
+        max-height: 10rem;
+    }
+    
+    form.form-contact1 input[type="submit"]{
+        width: 15rem;
+        background: #094A7D;
+        padding: 0.5rem;
+        border: none;
+        border-radius: 15px;
+        align-self: flex-end;
+        color: #fff;
+        font-size: 0.6rem;
+        font-weight: 600;
+        cursor: pointer;
+    }
+    
+    form.form-contact1 input[type="submit"]:hover{
+        background: #F9BA32;
+    }
+    /* BANNER MEDIOS DE PAGO */
+    .promo-section-2{
+        width: 90%;
+        margin: 1rem;
+        display: flex;
+        flex-direction: column;
+        border: 0.2rem #094A7D solid;
+        padding: 1rem;
+    }
+    
+    .promo-container-2 {
+        background-color: rgb(255, 255, 255);
+        color: #000000;
+        border-bottom: 0.1rem rgba(0, 0, 0, 0.817) solid;
+        height: auto;
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: stretch;
+    }
+    #square-promo{
+        width: 70%;
+        height: 90%;
+        color: white;
+        background-color: #F9BA32;
+        margin: 0rem 25%;
+        clip-path: polygon(0 0, 100% 0%, 100% 65%, 50% 100%, 0 65%);
+        text-align: center;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        align-content: flex-start;
+        justify-content: center;
+        font-size: 0.8rem;
+    }
+    
+    .promo-item1 {
+        font-family: arial !important;
+        color: #000000;
+        font-weight: bold;
+    }
+       
+    .submit-presupuesto div{
+        font-size: 0.8rem;
+    }
+    .promo-items2{
+        display: flex;
+        flex-basis: 100%;
+        align-self: auto;
+        align-content: center;
+        justify-content: center;
+        padding: 0.5rem 0.5rem;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .promo-items2 img{
+        width: 100%;
+        height: auto;
+    }
+    
+    .promo-items2 h4 {
+        font-size: 1rem;
+    }
+    .promo-items3{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 1rem;
+    }
+    .submit-presupuesto {
+        width: 15rem;
+        background: #094A7D;
+        padding: 0.5rem;
+        border: none;
+        border-radius: 15px;
+        color: #fff;
+        font-size: 1rem;
+        font-weight: 600;
+        cursor: pointer;
+    }
+}
+
+
+/* Sobre nosotros.html */
+/* SOBRE NOSOTROS */
+.quienes-somos {
+    display: flex;   
+    color: black;
+    clear:both;
+    overflow: auto;
+    width: 95%;
+    margin: auto auto;
+    margin-top: 1rem;
+    justify-content: center;
+    align-items: center;
+    border: rgb(9, 74, 125) 0.5rem solid;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+}
+#quienes-somos{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+      
+}
+#texto-quienes-somos{
+    border-right: #000000 solid 0.1rem;
+    padding: 1rem;
+}
+#quienes-somos p{
+    margin: 1rem;
+    font-family: sans-serif;
+    font-size: large;
+    text-align: justify;  
+}
+article ul{
+    display: flex;
+    flex-wrap: nowrap; 
+    align-items: center;
+    padding: 0;
+    align-items: stretch;
+    margin-bottom: 0;
+}
+article ul li{   
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-left: 1rem;
+    text-align: center;
+    }
+article ul li.medio {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    border-right: 0.3rem double black;
+    border-left: 0.3rem double black;
+}
+.section-2 p{
+    font-family: sans-serif;
+}
+.nosotros-ubicacion{
+    width: 100%;
+}
+.nosotros-ubicacion h3{
+    margin-bottom: 2rem;
+}
+.nosotros-ubicacion h6{
+    text-align: center;
+    margin-top: 0.5rem;
+}
+
+/* Media query de Productos.html */
+/* Break point 479px,576px, 768px, 1200px. */
+@media only screen and (max-width:1200px) {
+    .quienes-somos {
+        display: flex;   
+        color: black;
+        clear:both;
+        overflow: auto;
+        width: 95%;
+        margin: auto auto;
+        margin-top: 1rem;
+        justify-content: center;
+        align-items: center;
+        border: rgb(9, 74, 125) 0.5rem solid;
+        background-color: rgb(255, 255, 255);
+        color: rgb(0, 0, 0);
+        display: flex;
+        flex-direction: column;
+        padding: 1rem;
+    }
+    #quienes-somos{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #texto-quienes-somos{
+        border-right: 0;
+        padding: 1rem;
+    }
+    #quienes-somos p{
+        margin: 0.5rem;
+        font-family: sans-serif;
+        font-size: large;
+        text-align: justify;  
+    }
+    article ul{
+        display: flex;
+        flex-wrap: nowrap; 
+        align-items: center;
+        padding: 0;
+        align-items: stretch;
+        margin-bottom: 0;
+    }
+    article ul li{   
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        margin-left: 1rem;
+        text-align: center;
+    }
+    article ul li.medio {
+        padding: 1rem;
+        margin-left: 1rem;
+        margin-right: 1rem;
+        border-right: 0.3rem double black;
+        border-left: 0.3rem double black;
+    }
+    .section-2 p{
+        font-family: sans-serif;
+    }
+    .nosotros-ubicacion{
+        width: 100%;
+    }
+    .nosotros-ubicacion h3{
+        margin-bottom: 2rem;
+    }
+    .nosotros-ubicacion h6{
+        text-align: center;
+        margin-top: 0.5rem;
+    }
+    .quienes-somos img{
+        width: 35rem;
+    }
+}
+
+
+@media only screen and (max-width:768px) {
+    .quienes-somos {
+        display: flex;   
+        color: black;
+        clear:both;
+        overflow: auto;
+        width: 95%;
+        margin: auto auto;
+        margin-top: 1rem;
+        justify-content: center;
+        align-items: center;
+        border: rgb(9, 74, 125) 0.5rem solid;
+        background-color: rgb(255, 255, 255);
+        color: rgb(0, 0, 0);
+        display: flex;
+        flex-direction: column;
+        padding: 1rem;
+    }
+    #quienes-somos{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #texto-quienes-somos{
+        border-right: 0;
+        padding: 1rem;
+    }
+    #quienes-somos p{
+        margin: 0.5rem;
+        font-family: sans-serif;
+        font-size: medium;
+        text-align: justify;  
+    }
+    article ul{
+        display: flex;
+        flex-wrap: nowrap; 
+        align-items: center;
+        padding: 0;
+        align-items: stretch;
+        margin-bottom: 0;
+    }
+    article ul li{   
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        margin-left: 1rem;
+        text-align: center;
+    }
+    article ul li.medio {
+        padding: 1rem;
+        margin-left: 1rem;
+        margin-right: 1rem;
+        border-right: 0.3rem double black;
+        border-left: 0.3rem double black;
+    }
+    .section-2 p{
+        font-family: sans-serif;
+    }
+    .nosotros-ubicacion{
+        width: 100%;
+    }
+    .nosotros-ubicacion h3{
+        margin-bottom: 2rem;
+    }
+    .nosotros-ubicacion h6{
+        text-align: center;
+        margin-top: 0.5rem;
+    }
+}
+
+@media only screen and (max-width:576px){
+    
+.quienes-somos {
+    display: flex;   
+    color: black;
+    clear:both;
+    overflow: auto;
+    width: 95%;
+    margin: auto auto;
+    margin-top: 1rem;
+    justify-content: center;
+    align-items: center;
+    border: rgb(9, 74, 125) 0.5rem solid;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    display: flex;
+    flex-direction: column;
+    padding: 0.5rem;
+}
+#quienes-somos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#texto-quienes-somos{
+    border-right: 0;
+    padding: 0.1rem;
+}
+#texto-quienes-somos h2{
+    font-size: 1.5rem;
+}
+#quienes-somos p{
+    margin: 0.5rem;
+    font-family: sans-serif;
+    font-size: small;
+    text-align: justify;   
+}
+article ul{
+    display: flex;
+    flex-wrap: nowrap; 
+    align-items: center;
+    padding: 0;
+    align-items: stretch;
+    margin-bottom: 0;
+}
+article ul li{   
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-left: 0.5rem;
+    text-align: center;
+    }
+article ul li.medio {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    border-right: 0.2rem double black;
+    border-left: 0.2rem double black;
+}
+.section-2 p{
+    font-family: sans-serif;
+    font-size: small;
+}
+.container-nosotros-ubicacion{
+    display: flex;
+    flex-direction: column;
+}
+.nosotros-ubicacion{
+    width: 100%;
+    text-align: center;
+}
+.nosotros-ubicacion h3{
+    margin-bottom: 2rem;
+}
+.nosotros-ubicacion h6{
+    text-align: center;
+    margin-top: 0.5rem;
+}
+.quienes-somos img{
+    width: 18rem;
+}
+#Texto-aside-nosotros{
+    font-size: small;
+}
+}
+
+/* Productos.html */
+.titulo-producto{
+    text-align: center;
+    margin-top: 1rem;
+}
+
+ /* Productos de corralon */
+ .list-show{
+    background-color: #ffffffc5;
+    position: absolute;
+    width: 19rem;
+    height: 16rem;
+    opacity: 0;
+    color: rgb(0, 0, 0);
+    transition: all 0.5S ease;
+    text-align: center;
+    line-height: 1.5rem;
+    font-weight: bolder;
+      
+}    
+.Productos-Corralon {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 1rem;
+    grid-row-gap: 1.8rem;
+    justify-items: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.Producto-Corralon1 {
+    /* Ladrillos */
+    grid-area: 1 / 1 / 2 / 2;
+    box-shadow: 0px 0px 0.5rem rgba(0, 0, 0, 0.5);
+    text-align: center;
+    width: 19rem;
+    height: 16rem;
+    background-image: url('../Fotos del escudo/Produtos/9.png');
+    background-position: center center;
+    background-size: cover;
+}
+.Producto-Corralon1:hover .list-show{
+    opacity: 1;
+}
+.Producto-Corralon2 { 
+    /* cemento,cal y pegamentos */
+    grid-area: 1 / 2 / 2 / 3;
+    box-shadow: 0px 0px 1rem rgba(0, 0, 0, 0.5);
+    text-align: center;
+    width: 19rem;
+    height: 16rem;
+    background-image: url('../Fotos del escudo/Produtos/5.png');
+    background-position: center center;
+    background-size: cover;
+}
+.Producto-Corralon2:hover .list-show{
+    opacity: 1;
+}
+.Producto-Corralon3 { 
+    /* Piedra y arena */
+    grid-area: 1 / 3 / 2 / 4; 
+    box-shadow: 0px 0px 1rem rgba(0, 0, 0, 0.5);
+    text-align: center;
+    width: 19rem;
+    height: 16rem;
+    background-image: url('../Fotos del escudo/Produtos/12.png');
+    background-position: center center;
+    background-size: cover;
+ }
+ .Producto-Corralon3:hover .list-show{
+    opacity: 1;
+}
+.Producto-Corralon4 { 
+    /* aislantes e impermeabilizantes */
+    grid-area: 1 / 4 / 2 / 5; 
+    box-shadow: 0px 0px 1rem rgba(0, 0, 0, 0.5);
+    text-align: center; 
+    width: 19rem;
+    height: 16rem;
+    background-image: url('../Fotos del escudo/Produtos/7.png');
+    background-position: center center;
+    background-size: cover;
+}
+.Producto-Corralon4:hover .list-show{
+    opacity: 1;
+}
+.Producto-Corralon5 { 
+    /* viguetas pretensadas  */
+    grid-area: 2 / 4 / 3 / 5; 
+    box-shadow: 0px 0px 1rem rgba(0, 0, 0, 0.5);
+    text-align: center;
+    width: 19rem;
+    height: 16rem;
+    background-image: url('../Fotos del escudo/Produtos/15.png');
+    background-position: center center;
+    background-size: cover;
+}
+.Producto-Corralon5:hover .list-show{
+    opacity: 1;
+}
+.Producto-Corralon6 {
+    /* Hierros */
+    grid-area: 2 / 3 / 3 / 4;
+    box-shadow: 0px 0px 1rem rgba(0, 0, 0, 0.5);
+    text-align: center;
+    width: 19rem;
+    height: 16rem;
+    background-image: url('../Fotos del escudo/Produtos/10.png');
+    background-position: center center;
+    background-size: cover;
+}
+.Producto-Corralon6:hover .list-show{
+    opacity: 1;
+}
+.Producto-Corralon7 { 
+    /* mallas y alambres */
+    grid-area: 2 / 2 / 3 / 3;
+    box-shadow: 0px 0px 1rem rgba(0, 0, 0, 0.5);
+    text-align: center;
+    width: 19rem;
+    height: 16rem;
+    background-image: url('../Fotos del escudo/Produtos/11.png');
+    background-position: center center;
+    background-size: cover;
+}
+.Producto-Corralon7:hover .list-show{
+    opacity: 1;
+}
+.Producto-Corralon8 {
+    /* canerias */
+    grid-area: 2 / 1 / 3 / 2;
+    box-shadow: 0px 0px 1rem rgba(0, 0, 0, 0.5);
+    text-align: center;
+    width: 19rem;
+    height: 16rem;
+    background-image: url('../Fotos del escudo/Produtos/4.png');
+    background-position: center center;
+    background-size: cover;
+}
+.Producto-Corralon8:hover .list-show{
+    opacity: 1;
+}
+/* Productos de ferreteria */
+.Productos-Ferreteria {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 1rem;
+    grid-row-gap: 1.8rem;
+    justify-items: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.Producto-Ferreteria1 {
+    /* Articulos de electricidad */
+    grid-area: 1 / 1 / 2 / 2; 
+    box-shadow: 0px 0px 1rem rgba(0, 0, 0, 0.5);
+    text-align: center;
+    width: 19rem;
+    height: 16rem;
+    background-image: url('../Fotos del escudo/Produtos/1.png');
+    background-position: center center;
+    background-size: cover;
+}
+
+.Producto-Ferreteria1:hover .list-show{
+    opacity: 1;
+}
+
+.Producto-Ferreteria2 { 
+    /* Tornillos */
+    grid-area: 1 / 2 / 2 / 3; 
+    box-shadow: 0px 0px 1rem rgba(0, 0, 0, 0.5);
+    text-align: center;
+    width: 19rem;
+    height: 16rem;
+    background-image: url('../Fotos del escudo/Produtos/16.png');
+    background-position: center center;
+    background-size: cover;
+}
+.Producto-Ferreteria2:hover .list-show{
+    opacity: 1;
+}
+.Producto-Ferreteria3 { 
+    /* Pinturas y pinceles */
+    grid-area: 1 / 3 / 2 / 4; 
+    box-shadow: 0px 0px 1rem rgba(0, 0, 0, 0.5);
+    text-align: center; 
+    width: 19rem;
+    height: 16rem;
+    background-image: url('../Fotos del escudo/Produtos/14.png');
+    background-position: center center;
+    background-size: cover;
+}
+.Producto-Ferreteria3:hover .list-show{
+    opacity: 1;
+}
+.Producto-Ferreteria4 { 
+    /* clavos */
+    grid-area: 1 / 4 / 2 / 5; 
+    box-shadow: 0px 0px 1rem rgba(0, 0, 0, 0.5);
+    text-align: center; 
+    width: 19rem;
+    height: 16rem;
+    background-image: url('../Fotos del escudo/Produtos/6.png');
+    background-position: center center;
+    background-size: cover;
+}
+.Producto-Ferreteria4:hover .list-show{
+    opacity: 1;
+}
+.Producto-Ferreteria5 { 
+    /* Mangueras y adaptadores */
+    grid-area: 2 / 4 / 3 / 5; 
+    box-shadow: 0px 0px 1rem rgba(0, 0, 0, 0.5);
+    text-align: center;
+    width: 19rem;
+    height: 16rem;
+    background-image: url('../Fotos del escudo/Produtos/2.png');
+    background-position: center center;
+    background-size: cover;
+}
+.Producto-Ferreteria5:hover .list-show{
+    opacity: 1;
+}
+.Producto-Ferreteria6 { 
+    /* Tanques de agua */
+    grid-area: 2 / 3 / 3 / 4; 
+    box-shadow: 0px 0px 1rem rgba(0, 0, 0, 0.5);
+    text-align: center;
+    width: 19rem;
+    height: 16rem;
+    background-image: url('../Fotos del escudo/Produtos/13.png');
+    background-position: center center;
+    background-size: cover;
+}
+.Producto-Ferreteria6:hover .list-show{
+    opacity: 1;
+}
+.Producto-Ferreteria7 { 
+    /* Herramientas */
+    grid-area: 2 / 2 / 3 / 3; 
+    box-shadow: 0px 0px 1rem rgba(0, 0, 0, 0.5);
+    text-align: center;
+    width: 19rem;
+    height: 16rem;
+    background-image: url('../Fotos del escudo/Produtos/8.png');
+    background-position: center center;
+    background-size: cover;
+}
+.Producto-Ferreteria7:hover .list-show{
+    opacity: 1;
+}
+.Producto-Ferreteria8 { 
+    /*Accesorios de herramientas */
+    grid-area: 2 / 1 / 3 / 2; 
+    box-shadow: 0px 0px 1rem rgba(0, 0, 0, 0.5);
+    text-align: center;
+    width: 19rem;
+    height: 16rem;
+    background-image: url('../Fotos del escudo/Produtos/3.png');
+    background-position: center center;
+    background-size: cover;
+}
+.Producto-Ferreteria8:hover .list-show{
+    opacity: 1;
+}
+/*  */
+@media only screen and (max-width:1269px) {
+    #desaparece-576px{display: none;}
+    .list-show h4 {
+        font-size: 2vw;
+    }
+    .list-show h6{
+        font-size: 1.5vw;
+    }
+
+    .titulo-producto{
+        text-align: center;
+        margin-top: 1rem;
+    }
+    
+     /* Productos de corralon */
+     .list-show{
+        background-color: #ffffffc5;
+        position: absolute;
+        width: 22vw;
+        height: 25vh;
+        opacity: 0;
+        color: rgb(0, 0, 0);
+        transition: all 0.5S ease;
+        text-align: center;
+        line-height: 1.5rem;
+        font-weight: bolder;
+          
+    }    
+    .Productos-Corralon {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-column-gap: 1rem;
+        grid-row-gap: 1.8rem;
+        justify-items: center;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+    
+    .Producto-Corralon1 {
+        /* Ladrillos */
+        grid-area: 1 / 1 / 2 / 2;
+        box-shadow: 0px 0px 0.5rem rgba(0, 0, 0, 0.5);
+        text-align: center;
+        width: 22vw;
+        height: 25vh;
+        background-image: url('../Fotos del escudo/Produtos/9.png');
+        background-position: center center;
+        background-size: cover;
+    }
+    .Producto-Corralon1:hover .list-show{
+        opacity: 1;
+    }
+    .Producto-Corralon2 { 
+        /* cemento,cal y pegamentos */
+        grid-area: 1 / 2 / 2 / 3;
+        box-shadow: 0px 0px 1rem rgba(0, 0, 0, 0.5);
+        text-align: center;
+        width: 22vw;
+        height: 25vh;
+        background-image: url('../Fotos del escudo/Produtos/5.png');
+        background-position: center center;
+        background-size: cover;
+    }
+    .Producto-Corralon2:hover .list-show{
+        opacity: 1;
+    }
+    .Producto-Corralon3 { 
+        /* Piedra y arena */
+        grid-area: 1 / 3 / 2 / 4; 
+        box-shadow: 0px 0px 1rem rgba(0, 0, 0, 0.5);
+        text-align: center;
+        width: 22vw;
+        height: 25vh;
+        background-image: url('../Fotos del escudo/Produtos/12.png');
+        background-position: center center;
+        background-size: cover;
+     }
+     .Producto-Corralon3:hover .list-show{
+        opacity: 1;
+    }
+    .Producto-Corralon4 { 
+        /* aislantes e impermeabilizantes */
+        grid-area: 1 / 4 / 2 / 5; 
+        box-shadow: 0px 0px 1rem rgba(0, 0, 0, 0.5);
+        text-align: center; 
+        width: 22vw;
+        height: 25vh;
+        background-image: url('../Fotos del escudo/Produtos/7.png');
+        background-position: center center;
+        background-size: cover;
+    }
+    .Producto-Corralon4:hover .list-show{
+        opacity: 1;
+    }
+    .Producto-Corralon5 { 
+        /* viguetas pretensadas  */
+        grid-area: 2 / 4 / 3 / 5; 
+        box-shadow: 0px 0px 1rem rgba(0, 0, 0, 0.5);
+        text-align: center;
+        width: 22vw;
+        height: 25vh;
+        background-image: url('../Fotos del escudo/Produtos/15.png');
+        background-position: center center;
+        background-size: cover;
+    }
+    .Producto-Corralon5:hover .list-show{
+        opacity: 1;
+    }
+    .Producto-Corralon6 {
+        /* Hierros */
+        grid-area: 2 / 3 / 3 / 4;
+        box-shadow: 0px 0px 1rem rgba(0, 0, 0, 0.5);
+        text-align: center;
+        width: 22vw;
+        height: 25vh;
+        background-image: url('../Fotos del escudo/Produtos/10.png');
+        background-position: center center;
+        background-size: cover;
+    }
+    .Producto-Corralon6:hover .list-show{
+        opacity: 1;
+    }
+    .Producto-Corralon7 { 
+        /* mallas y alambres */
+        grid-area: 2 / 2 / 3 / 3;
+        box-shadow: 0px 0px 1rem rgba(0, 0, 0, 0.5);
+        text-align: center;
+        width: 22vw;
+        height: 25vh;
+        background-image: url('../Fotos del escudo/Produtos/11.png');
+        background-position: center center;
+        background-size: cover;
+    }
+    .Producto-Corralon7:hover .list-show{
+        opacity: 1;
+    }
+    .Producto-Corralon8 {
+        /* canerias */
+        grid-area: 2 / 1 / 3 / 2;
+        box-shadow: 0px 0px 1rem rgba(0, 0, 0, 0.5);
+        text-align: center;
+        width: 22vw;
+        height: 25vh;
+        background-image: url('../Fotos del escudo/Produtos/4.png');
+        background-position: center center;
+        background-size: cover;
+    }
+    .Producto-Corralon8:hover .list-show{
+        opacity: 1;
+    }
+    /* Productos de ferreteria */
+    .Productos-Ferreteria {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-column-gap: 1rem;
+        grid-row-gap: 1.8rem;
+        justify-items: center;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+    
+    .Producto-Ferreteria1 {
+        /* Articulos de electricidad */
+        grid-area: 1 / 1 / 2 / 2; 
+        box-shadow: 0px 0px 1rem rgba(0, 0, 0, 0.5);
+        text-align: center;
+        width: 22vw;
+        height: 25vh;
+        background-image: url('../Fotos del escudo/Produtos/1.png');
+        background-position: center center;
+        background-size: cover;
+    }
+    
+    .Producto-Ferreteria1:hover .list-show{
+        opacity: 1;
+    }
+    
+    .Producto-Ferreteria2 { 
+        /* Tornillos */
+        grid-area: 1 / 2 / 2 / 3; 
+        box-shadow: 0px 0px 1rem rgba(0, 0, 0, 0.5);
+        text-align: center;
+        width: 22vw;
+        height: 25vh;
+        background-image: url('../Fotos del escudo/Produtos/16.png');
+        background-position: center center;
+        background-size: cover;
+    }
+    .Producto-Ferreteria2:hover .list-show{
+        opacity: 1;
+    }
+    .Producto-Ferreteria3 { 
+        /* Pinturas y pinceles */
+        grid-area: 1 / 3 / 2 / 4; 
+        box-shadow: 0px 0px 1rem rgba(0, 0, 0, 0.5);
+        text-align: center; 
+        width: 22vw;
+        height: 25vh;
+        background-image: url('../Fotos del escudo/Produtos/14.png');
+        background-position: center center;
+        background-size: cover;
+    }
+    .Producto-Ferreteria3:hover .list-show{
+        opacity: 1;
+    }
+    .Producto-Ferreteria4 { 
+        /* clavos */
+        grid-area: 1 / 4 / 2 / 5; 
+        box-shadow: 0px 0px 1rem rgba(0, 0, 0, 0.5);
+        text-align: center; 
+        width: 22vw;
+        height: 25vh;
+        background-image: url('../Fotos del escudo/Produtos/6.png');
+        background-position: center center;
+        background-size: cover;
+    }
+    .Producto-Ferreteria4:hover .list-show{
+        opacity: 1;
+    }
+    .Producto-Ferreteria5 { 
+        /* Mangueras y adaptadores */
+        grid-area: 2 / 4 / 3 / 5; 
+        box-shadow: 0px 0px 1rem rgba(0, 0, 0, 0.5);
+        text-align: center;
+        width: 22vw;
+        height: 25vh;
+        background-image: url('../Fotos del escudo/Produtos/2.png');
+        background-position: center center;
+        background-size: cover;
+    }
+    .Producto-Ferreteria5:hover .list-show{
+        opacity: 1;
+    }
+    .Producto-Ferreteria6 { 
+        /* Tanques de agua */
+        grid-area: 2 / 3 / 3 / 4; 
+        box-shadow: 0px 0px 1rem rgba(0, 0, 0, 0.5);
+        text-align: center;
+        width: 22vw;
+        height: 25vh;
+        background-image: url('../Fotos del escudo/Produtos/13.png');
+        background-position: center center;
+        background-size: cover;
+    }
+    .Producto-Ferreteria6:hover .list-show{
+        opacity: 1;
+    }
+    .Producto-Ferreteria7 { 
+        /* Herramientas */
+        grid-area: 2 / 2 / 3 / 3; 
+        box-shadow: 0px 0px 1rem rgba(0, 0, 0, 0.5);
+        text-align: center;
+        width: 22vw;
+        height: 25vh;
+        background-image: url('../Fotos del escudo/Produtos/8.png');
+        background-position: center center;
+        background-size: cover;
+    }
+    .Producto-Ferreteria7:hover .list-show{
+        opacity: 1;
+    }
+    .Producto-Ferreteria8 { 
+        /*Accesorios de herramientas */
+        grid-area: 2 / 1 / 3 / 2; 
+        box-shadow: 0px 0px 1rem rgba(0, 0, 0, 0.5);
+        text-align: center;
+        width: 22vw;
+        height: 25vh;
+        background-image: url('../Fotos del escudo/Produtos/3.png');
+        background-position: center center;
+        background-size: cover;
+    }
+    .Producto-Ferreteria8:hover .list-show{
+        opacity: 1;
+    }
+}
+@media only screen and (max-width:768px){
+   
+    #desaparece-576px{
+        display: none;
+    }
+    .titulo-producto{
+        text-align: center;
+        margin-top: 1rem;
+    }
+    
+     /* Productos de corralon */
+     .list-show{
+        background-color: #ffffffc5;
+        position: absolute;
+        width: 30vw;
+        height: 28vh;
+        opacity: 0;
+        color: rgb(0, 0, 0);
+        transition: all 0.5S ease;
+        text-align: center;
+        line-height: 1.5rem;
+        font-weight: bolder;
+    }    
+    .Productos-Corralon {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        grid-column-gap: 1rem;
+        grid-row-gap: 1.8rem;
+        justify-items: center;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+    
+    .Producto-Corralon1 {
+        /* Ladrillos */
+        grid-area: 1 / 1 / 2 / 2;
+        box-shadow: 0px 0px 0.5rem rgba(0, 0, 0, 0.5);
+        text-align: center;
+        width: 30vw;
+        height: 28vh;
+        background-image: url('../Fotos del escudo/Produtos/9.png');
+        background-position: center center;
+        background-size: cover;
+    }
+    .Producto-Corralon1:hover .list-show{
+        opacity: 1;
+    }
+    .Producto-Corralon2 { 
+        /* cemento,cal y pegamentos */
+        grid-area: 1 / 2 / 2 / 3;
+        box-shadow: 0px 0px 1rem rgba(0, 0, 0, 0.5);
+        text-align: center;
+        width: 30vw;
+        height: 28vh;
+        background-image: url('../Fotos del escudo/Produtos/5.png');
+        background-position: center center;
+        background-size: cover;
+    }
+    .Producto-Corralon2:hover .list-show{
+        opacity: 1;
+    }
+    .Producto-Corralon3 { 
+        /* Piedra y arena */
+        grid-area: 1 / 3 / 2 / 4; 
+        box-shadow: 0px 0px 1rem rgba(0, 0, 0, 0.5);
+        text-align: center;
+        width: 30vw;
+        height: 28vh;
+        background-image: url('../Fotos del escudo/Produtos/12.png');
+        background-position: center center;
+        background-size: cover;
+     }
+     .Producto-Corralon3:hover .list-show{
+        opacity: 1;
+    }
+    .Producto-Corralon4 { 
+        /* aislantes e impermeabilizantes */
+        grid-area: 2 / 1 / 3 / 2; 
+        box-shadow: 0px 0px 1rem rgba(0, 0, 0, 0.5);
+        text-align: center; 
+        width: 30vw;
+        height: 28vh;
+        background-image: url('../Fotos del escudo/Produtos/7.png');
+        background-position: center center;
+        background-size: cover;
+    }
+    .Producto-Corralon4:hover .list-show{
+        opacity: 1;
+    }
+    .Producto-Corralon5 { 
+        /* viguetas pretensadas  */
+        grid-area: 2 / 2 / 3 / 3;
+        box-shadow: 0px 0px 1rem rgba(0, 0, 0, 0.5);
+        text-align: center;
+        width: 30vw;
+        height: 28vh;
+        background-image: url('../Fotos del escudo/Produtos/15.png');
+        background-position: center center;
+        background-size: cover;
+    }
+    .Producto-Corralon5:hover .list-show{
+        opacity: 1;
+    }
+    .Producto-Corralon6 {
+        /* Hierros */
+        grid-area: 2 / 3 / 3 / 4;
+        box-shadow: 0px 0px 1rem rgba(0, 0, 0, 0.5);
+        text-align: center;
+        width: 30vw;
+        height: 28vh;
+        background-image: url('../Fotos del escudo/Produtos/10.png');
+        background-position: center center;
+        background-size: cover;
+    }
+    .Producto-Corralon6:hover .list-show{
+        opacity: 1;
+    }
+    .Producto-Corralon7 { 
+        /* mallas y alambres */
+        grid-area: 3 / 1 / 4 / 2; 
+        box-shadow: 0px 0px 1rem rgba(0, 0, 0, 0.5);
+        text-align: center;
+        width: 30vw;
+        height: 28vh;
+        background-image: url('../Fotos del escudo/Produtos/11.png');
+        background-position: center center;
+        background-size: cover;
+    }
+    .Producto-Corralon7:hover .list-show{
+        opacity: 1;
+    }
+    .Producto-Corralon8 {
+        /* canerias */
+        grid-area: 3 / 2 / 4 / 3;
+        box-shadow: 0px 0px 1rem rgba(0, 0, 0, 0.5);
+        text-align: center;
+        width: 30vw;
+        height: 28vh;
+        background-image: url('../Fotos del escudo/Produtos/4.png');
+        background-position: center center;
+        background-size: cover;
+    }
+    .Producto-Corralon8:hover .list-show{
+        opacity: 1;
+    }
+    /* Productos de ferreteria */
+    .Productos-Ferreteria {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        grid-column-gap: 1rem;
+        grid-row-gap: 1.8rem;
+        justify-items: center;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+    
+    .Producto-Ferreteria1 {
+        /* Articulos de electricidad */
+        grid-area: 1 / 1 / 2 / 2; 
+        box-shadow: 0px 0px 1rem rgba(0, 0, 0, 0.5);
+        text-align: center;
+        width: 30vw;
+        height: 28vh;
+        background-image: url('../Fotos del escudo/Produtos/1.png');
+        background-position: center center;
+        background-size: cover;
+    }
+    
+    .Producto-Ferreteria1:hover .list-show{
+        opacity: 1;
+    }
+    
+    .Producto-Ferreteria2 { 
+        /* Tornillos */
+        grid-area: 1 / 2 / 2 / 3; 
+        box-shadow: 0px 0px 1rem rgba(0, 0, 0, 0.5);
+        text-align: center;
+        width: 30vw;
+        height: 28vh;
+        background-image: url('../Fotos del escudo/Produtos/16.png');
+        background-position: center center;
+        background-size: cover;
+    }
+    .Producto-Ferreteria2:hover .list-show{
+        opacity: 1;
+    }
+    .Producto-Ferreteria3 { 
+        /* Pinturas y pinceles */
+        grid-area: 1 / 3 / 2 / 4; 
+        box-shadow: 0px 0px 1rem rgba(0, 0, 0, 0.5);
+        text-align: center; 
+        width: 30vw;
+        height: 28vh;
+        background-image: url('../Fotos del escudo/Produtos/14.png');
+        background-position: center center;
+        background-size: cover;
+    }
+    .Producto-Ferreteria3:hover .list-show{
+        opacity: 1;
+    }
+    .Producto-Ferreteria4 { 
+        /* clavos */
+        grid-area: 2 / 1 / 3 / 2;
+        box-shadow: 0px 0px 1rem rgba(0, 0, 0, 0.5);
+        text-align: center; 
+        width: 30vw;
+        height: 28vh;
+        background-image: url('../Fotos del escudo/Produtos/6.png');
+        background-position: center center;
+        background-size: cover;
+    }
+    .Producto-Ferreteria4:hover .list-show{
+        opacity: 1;
+    }
+    .Producto-Ferreteria5 { 
+        /* Mangueras y adaptadores */
+        grid-area: 2 / 2 / 3 / 3;
+        box-shadow: 0px 0px 1rem rgba(0, 0, 0, 0.5);
+        text-align: center;
+        width: 30vw;
+        height: 28vh;
+        background-image: url('../Fotos del escudo/Produtos/2.png');
+        background-position: center center;
+        background-size: cover;
+    }
+    .Producto-Ferreteria5:hover .list-show{
+        opacity: 1;
+    }
+    .Producto-Ferreteria6 { 
+        /* Tanques de agua */
+        grid-area:2 / 3 / 3 / 4; 
+        box-shadow: 0px 0px 1rem rgba(0, 0, 0, 0.5);
+        text-align: center;
+        width: 30vw;
+        height: 28vh;
+        background-image: url('../Fotos del escudo/Produtos/13.png');
+        background-position: center center;
+        background-size: cover;
+    }
+    .Producto-Ferreteria6:hover .list-show{
+        opacity: 1;
+    }
+    .Producto-Ferreteria7 { 
+        /* Herramientas */
+        grid-area: 3 / 1 / 4 / 2;
+        box-shadow: 0px 0px 1rem rgba(0, 0, 0, 0.5);
+        text-align: center;
+        width: 30vw;
+        height: 28vh;
+        background-image: url('../Fotos del escudo/Produtos/8.png');
+        background-position: center center;
+        background-size: cover;
+    }
+    .Producto-Ferreteria7:hover .list-show{
+        opacity: 1;
+    }
+    .Producto-Ferreteria8 { 
+        /*Accesorios de herramientas */
+        grid-area: 3 / 2 / 4 / 3;
+        box-shadow: 0px 0px 1rem rgba(0, 0, 0, 0.5);
+        text-align: center;
+        width: 30vw;
+        height: 28vh;
+        background-image: url('../Fotos del escudo/Produtos/3.png');
+        background-position: center center;
+        background-size: cover;
+    }
+    .Producto-Ferreteria8:hover .list-show{
+        opacity: 1;
+    } 
+}
+@media only screen and (max-width:576px){
+   
+    #square-aside-txt-productos{
+        font-size: small;
+    }
+    .list-show h4 {
+        font-size: 3vw;
+    }
+    .list-show h6{
+        font-size: 2.5vw;
+    }
+    #desaparece-576px{
+        display: none;
+    }
+    
+    .titulo-producto{
+        text-align: center;
+        margin-top: 1rem;
+        font-size: medium;
+    }
+    
+     /* Productos de corralon */
+     .list-show{
+        background-color: #ffffffc5;
+        position: absolute;
+        width: 43vw;
+        height: 28vh;
+        opacity: 0;
+        color: rgb(0, 0, 0);
+        transition: all 0.5S ease;
+        text-align: center;
+        line-height: 1.5rem;
+        font-weight: bolder;
+          
+    }    
+    .Productos-Corralon {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        grid-column-gap: 1rem;
+        grid-row-gap: 1rem;
+        justify-items: center;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+    
+    .Producto-Corralon1 {
+        /* Ladrillos */
+        grid-area: 1 / 1 / 2 / 2;
+        box-shadow: 0px 0px 0.5rem rgba(0, 0, 0, 0.5);
+        text-align: center;
+        width: 43vw;
+        height: 28vh;
+        background-image: url('../Fotos del escudo/Produtos/9.png');
+        background-position: center center;
+        background-size: cover;
+    }
+    .Producto-Corralon1:hover .list-show{
+        opacity: 1;
+    }
+    .Producto-Corralon2 { 
+        /* cemento,cal y pegamentos */
+        grid-area: 1 / 2 / 2 / 3;
+        box-shadow: 0px 0px 1rem rgba(0, 0, 0, 0.5);
+        text-align: center;
+        width: 43vw;
+        height: 28vh;
+        background-image: url('../Fotos del escudo/Produtos/5.png');
+        background-position: center center;
+        background-size: cover;
+    }
+    .Producto-Corralon2:hover .list-show{
+        opacity: 1;
+    }
+    .Producto-Corralon3 { 
+        /* Piedra y arena */
+        grid-area: 2 / 1 / 3 / 2;
+        box-shadow: 0px 0px 1rem rgba(0, 0, 0, 0.5);
+        text-align: center;
+        width: 43vw;
+        height: 28vh;
+        background-image: url('../Fotos del escudo/Produtos/12.png');
+        background-position: center center;
+        background-size: cover;
+     }
+     .Producto-Corralon3:hover .list-show{
+        opacity: 1;
+    }
+    .Producto-Corralon4 { 
+        /* aislantes e impermeabilizantes */
+        grid-area: 2 / 2 / 3 / 3;
+        box-shadow: 0px 0px 1rem rgba(0, 0, 0, 0.5);
+        text-align: center; 
+        width: 43vw;
+        height: 28vh;
+        background-image: url('../Fotos del escudo/Produtos/7.png');
+        background-position: center center;
+        background-size: cover;
+    }
+    .Producto-Corralon4:hover .list-show{
+        opacity: 1;
+    }
+    .Producto-Corralon5 { 
+        /* viguetas pretensadas  */
+        grid-area: 3 / 1 / 4 / 2;
+        box-shadow: 0px 0px 1rem rgba(0, 0, 0, 0.5);
+        text-align: center;
+        width: 43vw;
+        height: 28vh;
+        background-image: url('../Fotos del escudo/Produtos/15.png');
+        background-position: center center;
+        background-size: cover;
+    }
+    .Producto-Corralon5:hover .list-show{
+        opacity: 1;
+    }
+    .Producto-Corralon6 {
+        /* Hierros */
+        grid-area: 3 / 2 / 4 / 3;
+        box-shadow: 0px 0px 1rem rgba(0, 0, 0, 0.5);
+        text-align: center;
+        width: 43vw;
+        height: 28vh;
+        background-image: url('../Fotos del escudo/Produtos/10.png');
+        background-position: center center;
+        background-size: cover;
+    }
+    .Producto-Corralon6:hover .list-show{
+        opacity: 1;
+    }
+    .Producto-Corralon7 { 
+        /* mallas y alambres */
+        grid-area: 4 / 1 / 5 / 2;
+        box-shadow: 0px 0px 1rem rgba(0, 0, 0, 0.5);
+        text-align: center;
+        width: 43vw;
+        height: 28vh;
+        background-image: url('../Fotos del escudo/Produtos/11.png');
+        background-position: center center;
+        background-size: cover;
+    }
+    .Producto-Corralon7:hover .list-show{
+        opacity: 1;
+    }
+    .Producto-Corralon8 {
+        /* canerias */
+        grid-area: 4 / 2 / 5 / 3;
+        box-shadow: 0px 0px 1rem rgba(0, 0, 0, 0.5);
+        text-align: center;
+        width: 43vw;
+        height: 28vh;
+        background-image: url('../Fotos del escudo/Produtos/4.png');
+        background-position: center center;
+        background-size: cover;
+    }
+    .Producto-Corralon8:hover .list-show{
+        opacity: 1;
+    }
+    /* Productos de ferreteria */
+    .Productos-Ferreteria {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        grid-column-gap: 1rem;
+        grid-row-gap: 1.8rem;
+        justify-items: center;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+    
+    .Producto-Ferreteria1 {
+        /* Articulos de electricidad */
+        grid-area: 1 / 1 / 2 / 2; 
+        box-shadow: 0px 0px 1rem rgba(0, 0, 0, 0.5);
+        text-align: center;
+        width: 43vw;
+        height: 28vh;
+        background-image: url('../Fotos del escudo/Produtos/1.png');
+        background-position: center center;
+        background-size: cover;
+    }
+    
+    .Producto-Ferreteria1:hover .list-show{
+        opacity: 1;
+    }
+    
+    .Producto-Ferreteria2 { 
+        /* Tornillos */
+        grid-area: 1 / 2 / 2 / 3; 
+        box-shadow: 0px 0px 1rem rgba(0, 0, 0, 0.5);
+        text-align: center;
+        width: 43vw;
+        height: 28vh;
+        background-image: url('../Fotos del escudo/Produtos/16.png');
+        background-position: center center;
+        background-size: cover;
+    }
+    .Producto-Ferreteria2:hover .list-show{
+        opacity: 1;
+    }
+    .Producto-Ferreteria3 { 
+        /* Pinturas y pinceles */
+        grid-area: 2 / 1 / 3 / 2;
+        box-shadow: 0px 0px 1rem rgba(0, 0, 0, 0.5);
+        text-align: center; 
+        width: 43vw;
+        height: 28vh;
+        background-image: url('../Fotos del escudo/Produtos/14.png');
+        background-position: center center;
+        background-size: cover;
+    }
+    .Producto-Ferreteria3:hover .list-show{
+        opacity: 1;
+    }
+    .Producto-Ferreteria4 { 
+        /* clavos */
+        grid-area: 2 / 2 / 3 / 3;
+        box-shadow: 0px 0px 1rem rgba(0, 0, 0, 0.5);
+        text-align: center; 
+        width: 43vw;
+        height: 28vh;
+        background-image: url('../Fotos del escudo/Produtos/6.png');
+        background-position: center center;
+        background-size: cover;
+    }
+    .Producto-Ferreteria4:hover .list-show{
+        opacity: 1;
+    }
+    .Producto-Ferreteria5 { 
+        /* Mangueras y adaptadores */
+        grid-area: 3 / 1 / 4 / 2;
+        box-shadow: 0px 0px 1rem rgba(0, 0, 0, 0.5);
+        text-align: center;
+        width: 43vw;
+        height: 28vh;
+        background-image: url('../Fotos del escudo/Produtos/2.png');
+        background-position: center center;
+        background-size: cover;
+    }
+    .Producto-Ferreteria5:hover .list-show{
+        opacity: 1;
+    }
+    .Producto-Ferreteria6 { 
+        /* Tanques de agua */
+        grid-area: 3 / 2 / 4 / 3;
+        box-shadow: 0px 0px 1rem rgba(0, 0, 0, 0.5);
+        text-align: center;
+        width: 43vw;
+        height: 28vh;
+        background-image: url('../Fotos del escudo/Produtos/13.png');
+        background-position: center center;
+        background-size: cover;
+    }
+    .Producto-Ferreteria6:hover .list-show{
+        opacity: 1;
+    }
+    .Producto-Ferreteria7 { 
+        /* Herramientas */
+        grid-area: 4 / 1 / 5 / 2;  
+        box-shadow: 0px 0px 1rem rgba(0, 0, 0, 0.5);
+        text-align: center;
+        width: 43vw;
+        height: 28vh;
+        background-image: url('../Fotos del escudo/Produtos/8.png');
+        background-position: center center;
+        background-size: cover;
+    }
+    .Producto-Ferreteria7:hover .list-show{
+        opacity: 1;
+    }
+    .Producto-Ferreteria8 { 
+        /*Accesorios de herramientas */
+        grid-area: 4 / 2 / 5 / 3;
+        box-shadow: 0px 0px 1rem rgba(0, 0, 0, 0.5);
+        text-align: center;
+        width: 43vw;
+        height: 28vh;
+        background-image: url('../Fotos del escudo/Produtos/3.png');
+        background-position: center center;
+        background-size: cover;
+    }
+    .Producto-Ferreteria8:hover .list-show{
+        opacity: 1;
+    }
+}
+
+/* Contacto.html */
+.form-container{
+    width: 100%;
+    height:auto;
+    margin: 50 auto;
+    display: flex;
+    background: #fff;
+    overflow: hidden;
+    box-shadow: 0px 0px 0.5rem rgba(0, 0, 0, 0.5);
+    margin-bottom: 2rem;
+}
+
+/* Informacion de Contacto*/
+
+.contac-container{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+    line-height: 2rem;
+}
+
+.contac-info,
+.contac-items{
+    position: relative;
+    z-index: 2;
+    color: rgb(0, 0, 0);
+}
+
+.contac-info h1{
+    font-family: mytipologo;
+    text-align: center;
+    color: #094A7D;
+    font-size: 1.8vw;
+    padding: 1rem;
+   font-weight: bold;
+}
+
+.contac-items{
+    border-right: #094A7D 0.2em solid;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.3vw;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    line-height: 2.5rem;
+}
+.contac-items li,a,p{
+    font-size: 1vw;
+    line-height: 2.5rem;
+}
+.contac-infor ul li a {
+        text-decoration: none;
+        color: #000000;
+        cursor: pointer;
+    }
+.contac-infor ul li a:hover{
+    color: #F9BA32;
+}
+/* Formulario de contacto*/
+form.form-contact{
+    width: 100%;
+    padding: 2rem 3rem;
+}
+
+form.form-contact h2{
+	font-size: 2vw;
+	font-weight: 600;
+	color: #303030;
+	margin-bottom: 2rem;
+}
+
+form.form-contact .user_info{
+    display: flex;
+    flex-direction: column;
+}
+
+form.form-contact label{
+    font-weight: 600;
+    font-size: 1vw ;
+}
+
+form.form-contact input,
+form.form-contact textarea{
+    width: 100%;
+    padding: 8px 0px 5px;
+    margin-bottom: 2rem;
+    border: none;
+    border-bottom: 2px solid #D1D1D1;
+	color: #5A5A5A;
+	font-size: 1vw;
+	font-weight: 400;
+}
+
+form.form-contact textarea{
+    max-width: 100%;
+    min-width: 100%;
+    max-height: 10rem;
+}
+
+form.form-contact input[type="submit"]{
+    width: 15rem;
+	background: #094A7D;
+	padding: 0.5rem;
+	border: none;
+	border-radius: 15px;
+    align-self: flex-end;
+    color: #fff;
+	font-size: 1rem;
+	font-weight: 600;
+	cursor: pointer;
+}
+
+form.form-contact input[type="submit"]:hover{
+    background: #F9BA32;
+}
+@media only screen and (max-width:1200px){
+    .form-container{
+    width: 100%;
+    height:auto;
+    margin: 0 0;
+    display: flex;
+    background: #fff;
+    overflow: hidden;
+    box-shadow: 0px 0px 0.5rem rgba(0, 0, 0, 0.5);
+    margin-bottom: 0rem;
+    flex-direction: column;
+    margin-top: 1rem;
+}
+
+/* Informacion de Contacto*/
+
+.contac-container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0rem;
+    line-height: 2.5rem;
+}
+
+.contac-info,
+.contac-items{
+    position: relative;
+    z-index: 2;
+    color: rgb(0, 0, 0);
+    margin: 0 0;
+}
+
+.contac-info h1{
+    font-family: mytipologo;
+    text-align: center;
+    color: #094A7D;
+    font-size: 3vw;
+    padding: 1rem;
+   font-weight: bold;
+}
+
+.contac-items{
+    border-right:0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    line-height: 1.5rem;
+}
+.contac-items li,a,p{
+    font-size: 1.5vw;
+    line-height: 2.5rem;
+}
+#contac-infor{
+    display: flex;
+    margin: 0 0;
+}
+.promo-6 iframe{
+    width: 80vw;
+}
+/* Formulario de contacto*/
+form.form-contact{
+    width: 100%;
+    padding: 2rem 2rem;
+}
+
+form.form-contact h2{
+    font-size: 2vw;
+    font-weight: 600;
+    color: #303030;
+    margin-bottom: 1rem;
+}
+
+form.form-contact .user_info{
+    display: flex;
+    flex-direction: column;
+}
+
+form.form-contact label{
+    font-weight: 600;
+    font-size: 1.5vw;
+}
+
+form.form-contact input,
+form.form-contact textarea{
+    width: 100%;
+    padding: 8px 0px 5px;
+    margin-bottom: 1rem;
+    border: none;
+    border-bottom: 2px solid #D1D1D1;
+    color: #5A5A5A;
+    font-size: 1vw;
+    font-weight: 400;
+}
+
+form.form-contact textarea{
+    max-width: 100%;
+    min-width: 100%;
+    max-height: 10rem;
+}
+
+form.form-contact input[type="submit"]{
+    width: 15rem;
+    background: #094A7D;
+    padding: 0.5rem;
+    border: none;
+    border-radius: 15px;
+    align-self: flex-end;
+    color: #fff;
+    font-size: 1.3vw;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+form.form-contact input[type="submit"]:hover{
+    background: #F9BA32;
+ }}
+
+@media only screen and (max-width:786px) {.form-container{
+    width: 100%;
+    height:auto;
+    margin: 0 0;
+    display: flex;
+    background: #fff;
+    overflow: hidden;
+    box-shadow: 0px 0px 0.5rem rgba(0, 0, 0, 0.5);
+    margin-bottom: 0rem;
+    flex-direction: column;
+    margin-top: 1rem;
+}
+
+/* Informacion de Contacto*/
+
+.contac-container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0rem;
+    line-height: 2.5rem;
+}
+
+.contac-info,
+.contac-items{
+    position: relative;
+    z-index: 2;
+    color: rgb(0, 0, 0);
+    margin: 0 0;
+}
+
+.contac-info h1{
+    font-family: mytipologo;
+    text-align: center;
+    color: #094A7D;
+    font-size: 3.6vw;
+    padding: 0.5rem;
+   font-weight: bold;
+}
+
+.contac-items{
+    border-right:0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    line-height: 1.5rem;
+}
+.contac-items li,a,p{
+    font-size: 2vw;
+    line-height: 2.5rem;
+}
+#contac-infor{
+    display: flex;
+    margin: 0 0;
+}
+.promo-6 iframe{
+    width: 80vw;
+}
+/* Formulario de contacto*/
+form.form-contact{
+    width: 100%;
+    padding: 2rem 2rem;
+}
+
+form.form-contact h2{
+    font-size: 2.7vw;
+    font-weight: 600;
+    color: #303030;
+    margin-bottom: 1rem;
+}
+
+form.form-contact .user_info{
+    display: flex;
+    flex-direction: column;
+}
+
+form.form-contact label{
+    font-weight: 600;
+    font-size: 2vw;
+}
+
+form.form-contact input,
+form.form-contact textarea{
+    width: 100%;
+    padding: 8px 0px 5px;
+    margin-bottom: 1rem;
+    border: none;
+    border-bottom: 2px solid #D1D1D1;
+    color: #5A5A5A;
+    font-size: 2vw;
+    font-weight: 400;
+}
+
+form.form-contact textarea{
+    max-width: 100%;
+    min-width: 100%;
+    max-height: 10rem;
+}
+
+form.form-contact input[type="submit"]{
+    width: 15rem;
+    background: #094A7D;
+    padding: 0.5rem;
+    border: none;
+    border-radius: 15px;
+    align-self: flex-end;
+    color: #fff;
+    font-size: 1.8vw;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+form.form-contact input[type="submit"]:hover{
+    background: #F9BA32;
+}
+
+}
+ @media only screen and (max-width:576px){
+    .form-container{
+        width: 100%;
+        height:auto;
+        margin: 0 0;
+        display: flex;
+        background: #fff;
+        overflow: hidden;
+        box-shadow: 0px 0px 0.5rem rgba(0, 0, 0, 0.5);
+        margin-bottom: 0rem;
+        flex-direction: column;
+        margin-top: 1rem;
+    }
+    
+    /* Informacion de Contacto*/
+    
+    .contac-container{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 0rem;
+        line-height: 2rem;
+    }
+    
+    .contac-info,
+    .contac-items{
+        position: relative;
+        z-index: 2;
+        color: rgb(0, 0, 0);
+        margin: 0 0;
+    }
+    
+    .contac-info h1{
+        font-family: mytipologo;
+        text-align: center;
+        color: #094A7D;
+        font-size: 3.6vw;
+        padding: 0.5rem;
+       font-weight: bold;
+    }
+    
+    .contac-items{
+        border-right:0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-weight: 600;
+        margin-bottom: 0.5rem;
+        line-height: 1.5rem;
+    }
+    .contac-items li,a,p{
+        font-size: 2.4vw;
+    }
+    #contac-infor{
+        display: flex;
+        margin: 0 0;
+    }
+    /* Formulario de contacto*/
+    form.form-contact{
+        width: 100%;
+        padding: 2rem 2rem;
+    }
+    
+    form.form-contact h2{
+        font-size: 3vw;
+        font-weight: 600;
+        color: #303030;
+        margin-bottom: 1rem;
+    }
+    
+    form.form-contact .user_info{
+        display: flex;
+        flex-direction: column;
+    }
+    
+    form.form-contact label{
+        font-weight: 600;
+        font-size: 2.4vw;
+    }
+    
+    form.form-contact input,
+    form.form-contact textarea{
+        width: 100%;
+        padding: 8px 0px 5px;
+        margin-bottom: 1rem;
+        border: none;
+        border-bottom: 2px solid #D1D1D1;
+        color: #5A5A5A;
+        font-size: 2vw;
+        font-weight: 400;
+    }
+    
+    form.form-contact textarea{
+        max-width: 100%;
+        min-width: 100%;
+        max-height: 10rem;
+    }
+    
+    form.form-contact input[type="submit"]{
+        width: 15rem;
+        background: #094A7D;
+        padding: 0.5rem;
+        border: none;
+        border-radius: 15px;
+        align-self: flex-end;
+        color: #fff;
+        font-size: 2vw;
+        font-weight: 600;
+        cursor: pointer;
+    }
+    
+    form.form-contact input[type="submit"]:hover{
+        background: #F9BA32;
+    }
+    
+}
