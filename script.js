@@ -50,7 +50,7 @@ const validación = (e) => {
     mensaje.focus();
     return false;
   }
-  
+  alert("Muchas gracias por contactarte con nosotros, te responderemos a la brevedad.");
   return true;
 }
 btnEnviar.addEventListener('click', validación);
