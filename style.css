@@ -2041,7 +2041,7 @@ article ul li.medio {
 .nosotros-ubicacion h6{
     text-align: center;
     margin-top: 0.5rem;
-}}
+}
 
 /* Media query de sobre Nosotros.html */
 /* Break point 479px,576px, 768px, 1200px. */
@@ -3517,7 +3517,7 @@ form.form-contact input[type="submit"]{
 
 form.form-contact input[type="submit"]:hover{
     background: #F9BA32;
-}}
+}
 
 @media only screen and (max-width:1200px){
     .form-container{
