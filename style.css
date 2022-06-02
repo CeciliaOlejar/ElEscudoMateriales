@@ -1968,7 +1968,7 @@ form.form-contact1 input[type="submit"]:hover{
         cursor: pointer;
     }
 }
-
+} 
 
 /* Sobre nosotros.html */
 /* SOBRE NOSOTROS */
@@ -2041,7 +2041,7 @@ article ul li.medio {
 .nosotros-ubicacion h6{
     text-align: center;
     margin-top: 0.5rem;
-}
+}}
 
 /* Media query de sobre Nosotros.html */
 /* Break point 479px,576px, 768px, 1200px. */
@@ -2552,6 +2552,7 @@ article ul li.medio {
 .Producto-Ferreteria8:hover .list-show{
     opacity: 1;
 }
+
 /*  */
 @media only screen and (max-width:1269px) {
     #desaparece-576px{display: none;}
@@ -2831,6 +2832,7 @@ article ul li.medio {
         opacity: 1;
     }
 }
+
 @media only screen and (max-width:768px){
    
     #desaparece-576px{
@@ -3104,6 +3106,7 @@ article ul li.medio {
         opacity: 1;
     } 
 }
+
 @media only screen and (max-width:576px){
    
     #square-aside-txt-productos{
@@ -3391,7 +3394,6 @@ article ul li.medio {
     .Producto-Ferreteria8:hover .list-show{
         opacity: 1;
     }
-}
 }
 
 
