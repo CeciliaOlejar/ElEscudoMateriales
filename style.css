@@ -1,8 +1,5 @@
 *{ 
     margin: 0rem;
-    /* font-family: 'Lato', sans-serif; */
-    /* font-family: 'Lora', serif; */
-    /* font-family: 'Poppins', sans-serif; */
     font-family:  letrabody;
     letter-spacing: 0.05em; 
 }
@@ -50,7 +47,7 @@
     right: 0;
   }
 
-/* Grow nimacion de https://ianlunn.github.io/Hover/ */
+/* Grow animacion de https://ianlunn.github.io/Hover/ */
 .hvr-grow {
     display: inline-block;
     vertical-align: middle;
@@ -491,7 +488,6 @@ list-style: none;
     }
 }
 
-
 aside {
     margin-top: 1rem;
 }
@@ -558,7 +554,7 @@ section {
 }
 
 /* DIVISION 2 BLOQUE */
-#square-aside{
+.square-aside{
     height: 7rem;
     width: 100%;
     border-top: #000000 solid 0.2rem;
@@ -573,7 +569,7 @@ section {
     text-align: center;
 }
 
-#square-aside div {
+.square-aside div {
      color: #F9BA32;
      width: 100%;
      font-size: medium;
@@ -581,7 +577,7 @@ section {
 }
 
 /* DIVISOR 3 BLOQUE */
-#square-aside-2{
+.square-aside-2{
     height: 8rem;
     width: 100%;
     border-top: #000000 solid 0.2rem;
@@ -598,11 +594,11 @@ section {
     color: #ffffff;
     
 }   
-#square-aside-2-div{
+.square-aside-2-div{
     margin-top: 1rem;
     margin-bottom: 0.5rem;
 }
-#square-aside-2 p{
+.square-aside-2 p{
     margin-bottom: 1rem;
 }
 /* slide marcas */
@@ -629,7 +625,6 @@ section {
   }
   .slider {
     background: white;
-    /*box-shadow: 0 10px 20px -5px rgba(0, 0, 0, .125);*/
     height: 100px;
     margin: auto;
     overflow: hidden;
@@ -755,8 +750,7 @@ footer{
     .navfooter ul li{
         display: inline-block;
         align-items: center;
-        font-size: small;
-        
+        font-size: small; 
     }
     }
 
@@ -1120,7 +1114,7 @@ form.form-contact1 input[type="submit"]:hover{
 }
 
 /* DIVISION 2 BLOQUE */
-#square-aside{
+#square-aside-index1{
     height: 6rem;
     width: 100%;
     border-top: #000000 solid 0.2rem;
@@ -1135,7 +1129,7 @@ form.form-contact1 input[type="submit"]:hover{
     text-align: center;
 }
 
-#square-aside div {
+#square-aside-index1 div {
      color: #F9BA32;
      width: 100%;
      font-size: small;
@@ -1143,7 +1137,7 @@ form.form-contact1 input[type="submit"]:hover{
 }
 
 /* DIVISOR 3 BLOQUE */
-#square-aside-2{
+#square-aside-index2{
     height: 6rem;
     width: 100%;
     border-top: #000000 solid 0.2rem;
@@ -1160,11 +1154,11 @@ form.form-contact1 input[type="submit"]:hover{
     color: #ffffff;
     
 }   
-#square-aside-2-div{
+#square-aside-index2-div{
     margin-top: 1rem;
     margin-bottom: 0.5rem;
 }
-#square-aside-2 p{
+#square-aside-index2 p{
     margin-bottom: 1rem;
     font-size: small;
 }
@@ -1417,7 +1411,7 @@ form.form-contact1 input[type="submit"]:hover{
 }
 
     /* DIVISION 2 BLOQUE */
-#square-aside{
+#square-aside-index1{
     height: 3rem;
     width: 100%;
     border-top: #000000 solid 0.2rem;
@@ -1432,7 +1426,7 @@ form.form-contact1 input[type="submit"]:hover{
     text-align: center;
 }
 
-#square-aside div {
+#square-aside-index1 div {
      color: #F9BA32;
      width: 100%;
      font-size: xx-small;
@@ -1440,7 +1434,7 @@ form.form-contact1 input[type="submit"]:hover{
 }
 
 /* DIVISOR 3 BLOQUE */
-#square-aside-2{
+#square-aside-index2{
     height: 3rem;
     width: 100%;
     border-top: #000000 solid 0.2rem;
@@ -1457,13 +1451,13 @@ form.form-contact1 input[type="submit"]:hover{
     color: #ffffff;
     
 }   
-#square-aside-2-div{
+#square-aside-index2-div{
     margin-top: 1rem;
 }
-#square-aside-2 img{
+#square-aside-index2 img{
     display: none;
 }
-#square-aside-2 p{
+#square-aside-index2 p{
     padding-bottom: 0.5rem;
     font-size: 0.6rem;
     
@@ -3131,6 +3125,8 @@ article ul li.medio {
     }
 }
 
+
+
 /* Contacto.html */
 .form-container{
     width: 100%;
@@ -3608,5 +3604,4 @@ form.form-contact input[type="submit"]:hover{
     form.form-contact input[type="submit"]:hover{
         background: #F9BA32;
     }
-    
 }

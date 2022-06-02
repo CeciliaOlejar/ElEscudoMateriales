@@ -16,38 +16,42 @@ function toggleMenu(event) {
 btnMobile.addEventListener('click', toggleMenu);
 btnMobile.addEventListener('touchstart', toggleMenu);
 
+
+
+
+
 const btnEnviar = document.getElementById('btnSend');
 
 const validación = (e) => {
   e.preventDefault();
-  const nombreDeUsuario = document.getElementById('names');
-  const direcciónEmail = document.getElementById('email');
-  const telefono = document.getElementById('phone');
+  const usuario = document.getElementById('names');
+  const email = document.getElementById('email');
+  const phone = document.getElementById('phone');
   const mensaje =document.getElementById ('mensaje');
 
-  if (usuario.value === " ") {
+
+  if (usuario.value === "") {
     alert("Por favor, escribe tu nombre de usuario.");
     usuario.focus();
     return false;
   }
-  if (email.value === " ") {
+  if (email.value === "") {
     alert("Por favor, escribe tu correo electrónico");
     email.focus();
     return false;
   }
-  if (phone.value === " ") {
+  if (phone.value === "") {
     alert("Por favor, escribe tu numero de contacto");
-    email.focus();
+    phone.focus();
     return false;
   }
-  if (mensaje.value === " ") {
+  if (mensaje.value === "") {
     alert("Por favor, escribe un mensaje");
-    email.focus();
+    mensaje.focus();
     return false;
   }
   
   return true;
 }
-
-submitBtn.addEventListener('click', validate);
+btnEnviar.addEventListener('click', validación);
 
