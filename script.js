@@ -19,7 +19,7 @@ btnMobile.addEventListener('touchstart', toggleMenu);
 
 
 
-
+const formulario = document.getElementById('formulario');
 const btnEnviar = document.getElementById('btnSend');
 
 const validación = (e) => {
@@ -51,7 +51,9 @@ const validación = (e) => {
     return false;
   }
   alert("Muchas gracias por contactarte con nosotros, te responderemos a la brevedad.");
+  formulario.reset();
   return true;
 }
-btnEnviar.addEventListener('click', validación);
 
+btnEnviar.addEventListener('click', validación);
+  
